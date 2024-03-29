@@ -1,4 +1,4 @@
-#import "JPushIosPlugin.h"
+#import "JpushIosPlugin.h"
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
@@ -23,7 +23,7 @@
 
 
 #if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
-@interface JPushIosPlugin ()<JPUSHRegisterDelegate,JPUSHInAppMessageDelegate>
+@interface JpushIosPlugin ()<JPUSHRegisterDelegate,JPUSHInAppMessageDelegate>
 //在前台时是否展示通知
 @property(assign, nonatomic) BOOL unShow;
 @end
@@ -31,7 +31,7 @@
 
 static NSMutableArray<FlutterResult>* getRidResults;
 
-@implementation JPushIosPlugin {
+@implementation JpushIosPlugin {
     NSDictionary *_launchNotification;
     NSDictionary *_completeLaunchNotification;
     BOOL _isJPushDidLogin;
@@ -43,7 +43,7 @@ static NSMutableArray<FlutterResult>* getRidResults;
     FlutterMethodChannel* channel = [FlutterMethodChannel
             methodChannelWithName:@"jpush"
                   binaryMessenger:[registrar messenger]];
-    JPushIosPlugin* instance = [[JPushIosPlugin alloc] init];
+    JpushIosPlugin* instance = [[JpushIosPlugin alloc] init];
     instance.channel = channel;
 
 

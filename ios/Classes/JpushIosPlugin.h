@@ -1,5 +1,5 @@
 #import <Flutter/Flutter.h>
 
-@interface JPushIosPlugin : NSObject<FlutterPlugin>
+@interface JpushIosPlugin : NSObject<FlutterPlugin>
 @property FlutterMethodChannel *channel;
 @end

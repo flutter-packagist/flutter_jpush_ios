@@ -20,5 +20,6 @@ A new Flutter project.
   s.dependency 'JPush','5.2.0'
   s.platform = :ios, '12.0'
   # Flutter.framework does not contain a i386 slice.
+  s.static_framework = true
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
